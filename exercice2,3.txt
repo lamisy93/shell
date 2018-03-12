@@ -1,0 +1,66 @@
+// Exercice 2 et 3
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ mkdir le_shell_cest_trop_cool!
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ ls
+le_shell_cest_trop_cool!  test1  test2  test3  test4  test5  test6
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ mv test1, test5 ^C
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ ls
+le_shell_cest_trop_cool!  test1  test2  test3  test4  test5  test6
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ mv test1, test5 le_shell_cest_trop_cool! (test qui ne fonctionne pas avec la virgule : sans virgule le déplacement des 2 fichier aurait fonctionné)
+mv: cannot stat 'test1,': No such file or directory
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ mv test1; test5 le_shell_cest_trop_cool! (test qui ne fonctionne pas avec le point virgule : le déplacement de fichier fonctionne uniquement pour test5)
+mv: missing destination file operand after 'test1'
+Try 'mv --help' for more information.
+No command 'test5' found, did you mean:
+ Command 'testr' from package 'python3-testrepository' (main)
+ Command 'testr' from package 'python-testrepository' (universe)
+ Command 'test' from package 'coreutils' (main)
+test5: command not found
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ ls
+le_shell_cest_trop_cool!  test1  test2  test3  test4  test6
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ mv test1 le_shell_cest_trop_cool!
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ LS
+The program 'LS' is currently not installed. You can install it by typing:
+sudo apt install sl
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ ls
+le_shell_cest_trop_cool!  test2  test3  test4  test6
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ cd le_shell_cest_trop_cool!
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell/le_shell_cest_trop_cool! $ ls
+test1  test5
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell/le_shell_cest_trop_cool! $ mv test1 test5 ../jaime_le_shell
+mv: target '../jaime_le_shell' is not a directory
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell/le_shell_cest_trop_cool! $ ls
+test1  test5
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell/le_shell_cest_trop_cool! $ mv test1 test5 jaime_le_shell
+mv: target 'jaime_le_shell' is not a directory
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell/le_shell_cest_trop_cool! $ mv test1 test5 /..jaime_le_shell
+mv: target '/..jaime_le_shell' is not a directory
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell/le_shell_cest_trop_cool! $ ls
+test1  test5
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell/le_shell_cest_trop_cool! $ cd ../
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ mv test1 test2 jaime_le_shell
+mv: target 'jaime_le_shell' is not a directory
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ mv test1 test2 ../jaime_le_shell
+mv: cannot stat 'test1': No such file or directory
+mv: 'test2' and '../jaime_le_shell/test2' are the same file
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ ls
+le_shell_cest_trop_cool!  test2  test3  test4  test6
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ cd le_shell_cest_trop_cool!
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell/le_shell_cest_trop_cool! $ ls
+test1  test5
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell/le_shell_cest_trop_cool! $ ../
+bash: ../ : Is a directory
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell/le_shell_cest_trop_cool! $ ls
+test1  test5
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell/le_shell_cest_trop_cool! $ ../
+bash: ../ : Is a directory
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell/le_shell_cest_trop_cool! $ cd ../
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ ls
+le_shell_cest_trop_cool!  test2  test3  test4  test6
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ cp -r test2 test6 le_shell_cest_trop_cool
+cp: target 'le_shell_cest_trop_cool' is not a directory
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ cp -r test2 test6 le_shell_cest_trop_cool! (copier dossier)
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ ls
+le_shell_cest_trop_cool!  test2  test3  test4  test6
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ cd le_shell_cest_trop_cool!
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell/le_shell_cest_trop_cool! $ ls
+test1  test2  test5  test6

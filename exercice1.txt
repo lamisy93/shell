@@ -1,0 +1,91 @@
+// Exercice1
+simplonco@simplonco-Latitude-E6320 ~/Bureau $ cd jaime_le_shell
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ ls
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ ls -l
+total 0
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ touch fichier1
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ cd jaime_le-shell
+bash: cd: jaime_le-shell: No such file or directory
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ cd jaime_le_shell
+bash: cd: jaime_le_shell: No such file or directory
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ cd Bureau
+bash: cd: Bureau: No such file or directory
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ ls
+fichier1
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ touch fichier2
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ ls
+fichier1  fichier2
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ touch fichier3
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ touch fichier4
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ touch fichier5
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ touch fichier6
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ ls
+fichier1  fichier2  fichier3  fichier4  fichier5  fichier6
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ ls -l
+total 0
+-rw-rw-r-- 1 simplonco simplonco 0 mars  12 10:22 fichier1
+-rw-rw-r-- 1 simplonco simplonco 0 mars  12 10:23 fichier2
+-rw-rw-r-- 1 simplonco simplonco 0 mars  12 10:23 fichier3
+-rw-rw-r-- 1 simplonco simplonco 0 mars  12 10:23 fichier4
+-rw-rw-r-- 1 simplonco simplonco 0 mars  12 10:23 fichier5
+-rw-rw-r-- 1 simplonco simplonco 0 mars  12 10:23 fichier6
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ cd fichier1
+bash: cd: fichier1: Not a directory
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ ls
+fichier1  fichier2  fichier3  fichier4  fichier5  fichier6
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ cd fichier1
+bash: cd: fichier1: Not a directory
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ cd Bureau
+bash: cd: Bureau: No such file or directory
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ ls
+fichier1  fichier2  fichier3  fichier4  fichier5  fichier6
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ cd fichier1
+bash: cd: fichier1: Not a directory
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ rm fichier1 (suppression de fichier)
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ ls
+fichier2  fichier3  fichier4  fichier5  fichier6
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ rm fichier2
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ rm fichier3
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ rm fichier4
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ rm fichier5
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ rm fichier6
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ ls
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ touch test1
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ mkdir test2
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ mkdir test3
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ mkdir test4
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ touch test5
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ mkdir test6
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ ls
+test1  test2  test3  test4  test5  test6
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ ls -l
+total 16
+-rw-rw-r-- 1 simplonco simplonco    0 mars  12 10:46 test1
+drwxrwxr-x 2 simplonco simplonco 4096 mars  12 10:46 test2
+drwxrwxr-x 2 simplonco simplonco 4096 mars  12 10:47 test3
+drwxrwxr-x 2 simplonco simplonco 4096 mars  12 10:47 test4
+-rw-rw-r-- 1 simplonco simplonco    0 mars  12 10:47 test5
+drwxrwxr-x 2 simplonco simplonco 4096 mars  12 10:47 test6
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ cd test1
+bash: cd: test1: Not a directory
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ chmod test1 644
+chmod: invalid mode: ‘test1’
+Try 'chmod --help' for more information.
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ chmod 644 test1 (création de droits rw-r--r)
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ ls -l
+total 16
+-rw-r--r-- 1 simplonco simplonco    0 mars  12 10:46 test1
+drwxrwxr-x 2 simplonco simplonco 4096 mars  12 10:46 test2
+drwxrwxr-x 2 simplonco simplonco 4096 mars  12 10:47 test3
+drwxrwxr-x 2 simplonco simplonco 4096 mars  12 10:47 test4
+-rw-rw-r-- 1 simplonco simplonco    0 mars  12 10:47 test5
+drwxrwxr-x 2 simplonco simplonco 4096 mars  12 10:47 test6
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ chmod 644 test5 (création de droits rw-r--r)
+simplonco@simplonco-Latitude-E6320 ~/Bureau/jaime_le_shell $ ls -l
+total 16
+-rw-r--r-- 1 simplonco simplonco    0 mars  12 10:46 test1
+drwxrwxr-x 2 simplonco simplonco 4096 mars  12 10:46 test2
+drwxrwxr-x 2 simplonco simplonco 4096 mars  12 10:47 test3
+drwxrwxr-x 2 simplonco simplonco 4096 mars  12 10:47 test4
+-rw-r--r-- 1 simplonco simplonco    0 mars  12 10:47 test5
+drwxrwxr-x 2 simplonco simplonco 4096 mars  12 10:47 test6
